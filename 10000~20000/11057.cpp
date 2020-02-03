@@ -11,7 +11,7 @@ int main() {
 	for (int i = 0; i < 10; i++) {
 		arr[1][i] = 1;
 	}
-	
+
 	int n;
 	cin >> n;
 
