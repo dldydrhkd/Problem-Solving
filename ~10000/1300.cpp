@@ -14,8 +14,7 @@ int main() {
 		mid = (first + last) / 2;
 		int sum = 0;
 		for (int i = 1; i <= n; i++) {
-			sum += min(n, mid / i);		// 해당 수 보다 낮은 수의 개수를 알 수 있다
-		}
+			sum += min(n, mid / i);		// count number less than mid
 		if (sum < k) {
 			first = mid + 1;
 		}
