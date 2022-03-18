@@ -2,17 +2,24 @@ import sys
 
 input = sys.stdin.readline
 
-n = int(input().strip())
+t = int(input().strip())
 
-li = [input().strip() for _ in range(n)]
+def check(jump,n):
+    if jump*(jump+1)<=2*n:
+        return True
+    return False
 
-def cal(temp):
-    val = 0
-    for i in temp:
-        if(str(i).isdigit()):
-            val+=int(i)
-    return val
-
-li.sort(key = lambda x : (len(x),cal(x),x))
-for j in li:
-    print(j)
+while(t):
+    n = int(input().strip())
+    start = 1
+    end = n
+    answer = 0
+    while(start<=end):
+        mid = (start+end)//2
+        if(check(mid,n)):
+            answer = max(answer, mid)
+            start = mid+1
+        else:
+            end = mid-1
+    t-=1
+    print(answer)
