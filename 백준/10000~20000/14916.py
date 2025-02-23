@@ -1,7 +1,6 @@
 import sys
 
 input = sys.stdin.readline
-sys.setrecursionlimit(10**9)
 
 n = int(input())
 
@@ -16,6 +15,5 @@ for i in range(1,n+1):
         li[i] = li[i-x[0]]+1
     elif li[i-x[1]] >= 0:
         li[i] = li[i-x[1]]+1
-    print(i, li[i])
 
 print(li[n])
