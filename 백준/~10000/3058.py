@@ -22,4 +22,3 @@ while(t):
     answer.append(sum_li(e_li))
     answer.append(min_li(e_li))
     print(*answer)
-    
