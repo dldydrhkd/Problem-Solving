@@ -29,4 +29,3 @@ while(n):
             print(a)
         else:
             print(-1)
-    
